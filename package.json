@@ -10,10 +10,12 @@
   "author": "Amanda Fry",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.4.1",
-    "socket.io": "^1.4.5",
     "body-parser": "latest",
+    "bootstrap-datepicker": "^1.6.4",
+    "bootstrap-timepicker": "^0.5.2",
+    "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "mongoose": "latest"
+    "mongoose": "latest",
+    "socket.io": "^1.4.5"
   }
 }

@@ -6,5 +6,9 @@ module.exports = function(app){
         users.create(req, res);
     });
 
+	app.post('/new_appointment', function(req,res){
+		console.log('got to to routse ')
+		console.log(req.body)
+	})
 
 }

@@ -13,5 +13,24 @@
 	<h2>New Appointment</h2>
 	<p>logged on{{currentUser.name}} - {{currentUser._id}}</p>
 	</br>
-	
+	<form class="form-horizontal" name="newappointmentform">
+		<div class="form-group">
+			<label class="control-label col-sm-2">Date</label>
+			<input type="date" ng-model="newA.date" required>
+			<input type="time" ng-model="newA.time" required>
+		</div>
+		<div class="form-group">
+			<label class="control-label col-sm-2">Complain</label>
+			<input type="text" ng-model="newA.complain" ng-minlength='10' required style="width: 70%;">
+		</div>
+		<div class="movealign">
+			<input class="btn btn-primary" type="submit" ng-click="cancel()" value="Cancel">
+			<input class="btn btn-primary" type="submit" ng-click="appointmentCreate()" value="Add Appointment">
+		</div>
+	</form>
+	<div ng-messages="newappointmentform.$error">
+	     <p ng-message="minlength" style="color:#cc0000;">The complaint must be at least 10 characters.</p>
+	     <p ng-message="required" style="color:#cc0000;">Date, time and complain fiels is required.</p>
+	</div>
 </div>
+
