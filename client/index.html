@@ -2,7 +2,7 @@
 <html ng-app='myApp'>
 <head>
 	<meta charset="UTF-8">
-	<title>For fun</title>
+	<title>Doctor appointment</title>
 	<meta name="author" content="Amanda Fry ">
 	<link rel="stylesheet" type="text/css" href="./css/AmandaTemplate.css">
     <!-- Bootstrap -->
@@ -25,7 +25,9 @@
     <!-- supporting file, I have to list each one to load -->
     <script type="text/javascript" src='./controllers/login_controller.js'></script>
     <script type="text/javascript" src='./controllers/dashboard_controller.js'></script>
+    <script type="text/javascript" src='./controllers/appointment_controller.js'></script>
     <script type="text/javascript" src='./factories/user_factory.js'></script>
+    <script type="text/javascript" src='./factories/appointment_factory.js'></script>
 
 
    
@@ -33,12 +35,17 @@
 <body>
 	<div class="container">
         <div class="header">
-            <h1><span>(MEAN) </span> for fun project</h1>
-            <h3>Assigment - practice</h3>
+            <h1><span>(MEAN) </span>Doctor's appointment</h1>
+            <h3>Assigment - project</h3>
             <div class="descr">
-                <p>Assigment description: preping for other exams</p>
+                <p>Assigment description: create an project where you can create appointments for a doctor</p>
                 <ul>
-                    <li>There are pages to login, dashboard, list of item accomlished or not.</li>
+                    <li>There can be only 3 appointments per day</li>
+                    <li>User only can delete their own appointment</li>
+                    <li>Every one can see all the appointments, showing the oldest on top</li>
+                    <li>Only appointment will be seen for today and the future</li>
+                    <li>Complain needs to be 10 charcter at least</li>
+                    <li>Appointments can be only set between 8AM - 5PM</li>
                 </ul>
             </div>
         </div><!-- end of header content-->

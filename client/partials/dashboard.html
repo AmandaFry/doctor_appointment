@@ -3,16 +3,38 @@
 	<nav class="nav navbar-nav navbar-right">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	        <a class="navbar-brand" href="#/tbd">Placeholder</a>
+	        <a class="navbar-brand" href="#/appointment">Add appointment</a>
 	        <a class="navbar-brand" href="#/">Logout</a>
 	    </div>
 	  </div>
 	</nav></br>
 
 	<!-- Welcome section and search -->
-	<h2>Welcome {{currentUser.name}}</h2>
-	<p>{{currentUser._id}}</p>
+	<h2>Doctor's Appointments</h2>
+	<p>logged on{{currentUser.name}} - {{currentUser._id}}</p>
 	</br>
-
-
+	<!-- Search inside the table -->
+	<div class="onRight">
+		<label>Search:</label>
+		<input type="text" ng-model="filter_appointment">
+	</div>
+	<!-- Table for questions -->
+	<table class="table table-striped" style="border:1px solid tan;">
+		<thead>
+			<tr>
+				<td>Date</td>
+				<td>Time</td>
+				<td>Patient Name</td>
+				<td>Complain</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="appointment in appointments | filter: filter_appointment">
+				<td>date goes here</td>
+				<td>time goes here</td>
+				<td>user goes here</td>
+				<td>complain goes here, cancle button goes here</td>
+			</tr>
+		</tbody>
+	</table>
 </div>

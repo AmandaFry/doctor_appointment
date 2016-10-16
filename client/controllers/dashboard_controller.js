@@ -1,4 +1,4 @@
-myApp.controller('dashboardController', function ($scope, $location,$routeParams,$cookies){
+myApp.controller('dashboardController', function ($scope, $location,$routeParams,$cookies, appointmentFactory){
 
 	//CURRENT USER SECTION - this section to read from session cookie the current user info
 	//In user_factory I put/set the current user cookie
